@@ -1,12 +1,24 @@
 <template>
-  <div id="app">
-    <router-view/>
+  <div>
+    <hi :msg="message"/>
+    <a href="/hi">go hi</a>
   </div>
 </template>
 
 <script>
+import hi from '../components/hi.vue'
+
 export default {
-  name: 'app'
+  data(){
+    let message='hello'+(Math.random()*10).toFixed()
+    return {
+        message
+    }
+  },
+  name: 'app',
+  components: {
+    hi
+  }
 }
 </script>
 
