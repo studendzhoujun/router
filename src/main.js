@@ -4,6 +4,7 @@ import xiao from './components/xiao.vue'
 import hi from './components/hi.vue'
 import liu from './components/liu.vue'
 import router from './router'
+import store from './store/store'
 Vue.config.productionTip = false
 
 const Components ={
@@ -24,5 +25,6 @@ Vue.use(cmv)
 
 new Vue({
   router,
+  store,
   render: h => h(App),
 }).$mount('#app')
